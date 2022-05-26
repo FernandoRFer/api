@@ -42,7 +42,7 @@ namespace API.Models
             return true;
         }
 
-        public bool PatchNome(int id, string nomeMuisca)
+        public bool PatchNomeMusica(int id, string nomeMuisca)
 
         {
 
@@ -57,7 +57,7 @@ namespace API.Models
 
         {
 
-            var query = "update MusicaCompleta set NomeMusica = '" + Cifra + "'  WHERE id = '" + id + "' ";
+            var query = "update MusicaCompleta set Cifra = '" + Cifra + "'  WHERE id = '" + id + "' ";
 
             var data = sql.ExecuteSelect(query);
 
@@ -75,6 +75,16 @@ namespace API.Models
             return true;
         }
 
+        public bool GetMusicsID(int consulta)
+        {
+            var query = "Select * From MusicaCompleta WHERE Id = '" + consulta + "'";
+
+            var data = sql.ExecuteSelect(query);
+
+            if (data.Rows.Count <= 0) return false;
+
+            return true;
+        }
 
 
         public bool AddMusic(string NomeMusica, string Cifra)

@@ -8,18 +8,24 @@ namespace API
     {
         private SqlConnection cn;
 
+
         public Sql()
         {
             Conexao();
         }
 
+
+        //string de conexão sql server c#
         private void Conexao()
         {
+           
             string conec = "Data Source=FERNANDO\\SQLEXPRESS;Initial Catalog=Music;User ID=sa;Password=Api123456;Language=Portuguese";
 
             this.cn = new SqlConnection(conec);
         }
 
+
+        //Abrir conexão
         private void AbrirConexao()
         {
             try
@@ -31,6 +37,8 @@ namespace API
                 throw e;
             }
         }
+
+
 
         private void FecharConexao()
         {

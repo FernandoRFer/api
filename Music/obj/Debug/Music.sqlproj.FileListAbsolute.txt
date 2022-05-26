@@ -8,3 +8,13 @@ C:\Users\ferna\OneDrive\Área de Trabalho\MusicList\API\API\Music\obj\Debug\post
 C:\Users\ferna\OneDrive\Área de Trabalho\MusicList\API\API\Music\obj\Debug\predeploy.sql
 C:\Users\ferna\OneDrive\Área de Trabalho\MusicList\API\API\Music\obj\Debug\Music.dll
 C:\Users\ferna\OneDrive\Área de Trabalho\MusicList\API\API\Music\obj\Debug\Music.pdb
+C:\Users\ferna\OneDrive\Área de Trabalho\MusicList\API2\API\Music\bin\Debug\Music.dacpac
+C:\Users\ferna\OneDrive\Área de Trabalho\MusicList\API2\API\Music\bin\Debug\Music.dll
+C:\Users\ferna\OneDrive\Área de Trabalho\MusicList\API2\API\Music\bin\Debug\Music.pdb
+C:\Users\ferna\OneDrive\Área de Trabalho\MusicList\API2\API\Music\obj\Debug\Music.sqlproj.AssemblyReference.cache
+C:\Users\ferna\OneDrive\Área de Trabalho\MusicList\API2\API\Music\obj\Debug\Model.xml
+C:\Users\ferna\OneDrive\Área de Trabalho\MusicList\API2\API\Music\obj\Debug\refactor.xml
+C:\Users\ferna\OneDrive\Área de Trabalho\MusicList\API2\API\Music\obj\Debug\postdeploy.sql
+C:\Users\ferna\OneDrive\Área de Trabalho\MusicList\API2\API\Music\obj\Debug\predeploy.sql
+C:\Users\ferna\OneDrive\Área de Trabalho\MusicList\API2\API\Music\obj\Debug\Music.dll
+C:\Users\ferna\OneDrive\Área de Trabalho\MusicList\API2\API\Music\obj\Debug\Music.pdb

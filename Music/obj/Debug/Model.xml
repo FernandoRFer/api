@@ -12,7 +12,7 @@
 		</CustomData>
 		<CustomData Category="Reference" Type="Assembly">
 			<Metadata Name="LogicalName" Value="Music.dll" />
-			<Metadata Name="FileName" Value="C:\USERS\FERNA\ONEDRIVE\ÁREA DE TRABALHO\MUSICLIST\API\API\MUSIC\OBJ\DEBUG\MUSIC.DLL" />
+			<Metadata Name="FileName" Value="C:\USERS\FERNA\ONEDRIVE\ÁREA DE TRABALHO\MUSICLIST\API2\API\MUSIC\OBJ\DEBUG\MUSIC.DLL" />
 			<Metadata Name="AssemblyName" Value="Music" />
 			<Metadata Name="PermissionSet" Value="SAFE" />
 			<Metadata Name="Owner" Value="" />
@@ -20,7 +20,7 @@
 			<Metadata Name="IsVisible" Value="True" />
 			<Metadata Name="IsModelAware" Value="True" />
 			<Metadata Name="SkipCreationIfEmpty" Value="True" />
-			<Metadata Name="AssemblySymbolsName" Value="C:\Users\ferna\OneDrive\Área de Trabalho\MusicList\API\API\Music\obj\Debug\Music.pdb" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Users\ferna\OneDrive\Área de Trabalho\MusicList\API2\API\Music\obj\Debug\Music.pdb" />
 		</CustomData>
 		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
 	</Header>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\MusicList\\API\\API\\API\\API.csproj": {}
+    "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\MusicList\\API2\\API\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\MusicList\\API\\API\\API\\API.csproj": {
+    "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\MusicList\\API2\\API\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\MusicList\\API\\API\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\MusicList\\API2\\API\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\MusicList\\API\\API\\API\\API.csproj",
+        "projectPath": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\MusicList\\API2\\API\\API\\API.csproj",
         "packagesPath": "C:\\Users\\ferna\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\MusicList\\API\\API\\API\\obj\\",
+        "outputPath": "C:\\Users\\ferna\\OneDrive\\Área de Trabalho\\MusicList\\API2\\API\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ferna\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,6 +43,20 @@
             "Docker.DotNet": {
               "target": "Package",
               "version": "[3.125.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.5, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
