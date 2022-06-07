@@ -15,11 +15,12 @@ namespace API.Controllers
         [Route("/music")]
         public IActionResult Get([FromQuery] string? filtroNome)
         {
-            var musicModel = new MusicaCompletaModel();
+            var musicModel = new MusicaCompletaRepository();
 
             var data = musicModel.GetMusics(filtroNome);
 
-            if (data == null) return BadRequest();
+            if (data.Rows.Count <= 0  ) return BadRequest();
+
 
             var dataJson = JsonConvert.SerializeObject(data, Formatting.Indented);
 
@@ -30,14 +31,14 @@ namespace API.Controllers
         [Route("/music")]
         public IActionResult Post([FromBody] Music music )
         {
-            var musicModel = new MusicaCompletaModel();
+            var musicModel = new MusicaCompletaRepository();
                 var constula = musicModel.GetMusicsC(music.NomeMusica);
 
 
             if (musicModel.AddMusic(music.NomeMusica, music.Cifra))
 
 
-            if (!constula)   return BadRequest("Não foi possivel adicionar a musica");
+            if (!constula)   return BadRequest();
 
             // if (musicModel.GetMusicsC(music.NomeMusica) == false) return BadRequest("Não foi possivel adicionar a musica");
 
@@ -51,40 +52,26 @@ namespace API.Controllers
         [Route("/music")]
         public IActionResult Put([FromBody]  Music music)
         {
-            var musicModel = new MusicaCompletaModel();
+            var musicModel = new MusicaCompletaRepository();
             var constula = musicModel.GetMusicsID(music.Id);
 
-            if (!constula) return BadRequest("Não foi possivel adicionar a musica");
+            if (!constula) return BadRequest();
 
             var data = musicModel.PutMusics(music.Id, music.NomeMusica, music.Cifra);
 
             return Ok(data);
             
-        }
+        }       
        
-       [HttpPatch]
-       [Route("/music")]
-       public IActionResult PatchNomeMusica([FromBody] Music music)
-        {
-
-            var musicModel = new MusicaCompletaModel();
-            var constula = musicModel.GetMusicsID(music.Id);
-            if (!constula) return BadRequest("Não foi possivel adicionar a musica");
-
-            var data = musicModel.PatchNomeMusica(music.Id, music.NomeMusica);
-
-            //if(musicModelSaved is null) BadRequest("Não foi possivel atualizar a musica");
-            return Ok(data);
-        }
 
         [HttpPatch]
         [Route("/musiccifra")]
         public IActionResult PatchCifra([FromBody] Music music)
         {
 
-            var musicModel = new MusicaCompletaModel();
+            var musicModel = new MusicaCompletaRepository();
             var constula = musicModel.GetMusicsID(music.Id);
-            if (!constula) return BadRequest("Não foi possivel adicionar a musica");
+            if (!constula) return BadRequest();
 
             var data = musicModel.PatchCifra(music.Id, music.Cifra);
 
@@ -96,11 +83,11 @@ namespace API.Controllers
         [Route("/music")]
         public IActionResult Delete(int id )
         {
-            var musicModel = new MusicaCompletaModel();
+            var musicModel = new MusicaCompletaRepository();
             var constula = musicModel.GetMusicsID(id);
-            if (!constula) return BadRequest("Não foi possivel adicionar a musica");
+            if (!constula) return BadRequest("Não deletar");
 
-            var data = musicModel.PatchDelete(id); 
+            var data = musicModel.Delete(id); 
 
 
             return Ok(data);

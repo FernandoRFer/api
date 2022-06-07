@@ -59,6 +59,12 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="MusicaCompleta.sql" />
+    <Build Include="Usuario.sql" />
+    <Build Include="PlayList.sql" />
+    <Build Include="Artista.sql" />
+    <Build Include="Cifra.sql" />
+    <Build Include="Compasso.sql" />
+    <Build Include="Musica.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Music.refactorlog" />
