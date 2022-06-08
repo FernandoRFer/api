@@ -14,11 +14,12 @@ namespace API.Controllers
         [Route("/usuario")]
         public IActionResult Get([FromQuery] int id) 
             {
-            var usuarioModel = new UsuarioRepository();
-            var constula = usuarioModel.ConsultaId(id);
-            if (constula) return BadRequest();
-                     
-            var data = usuarioModel.GetId(id);
+            var model = new UsuarioRepository();
+
+            var data = model.GetId(id);
+
+            if (data.Rows.Count <= 0) return BadRequest();
+
 
             var dataJson = JsonConvert.SerializeObject(data, Formatting.Indented);
 
@@ -33,15 +34,15 @@ namespace API.Controllers
         [Route("/usuario")]
         public IActionResult Post([FromBody] Usuario usuario)
         {
-            var usuarioModel = new UsuarioRepository();
-            var constula = usuarioModel.GetLogin(usuario.Login);
+            var model = new UsuarioRepository();
+            var constula = model.GetLogin(usuario.Login);
 
             if (!constula)
             {
                 return BadRequest();
             }
 
-            if (usuarioModel.Add(usuario.Nome, usuario.Login, usuario.Senha, usuario.DataCadastro))
+            if (model.Add(usuario.Nome, usuario.Login, usuario.Senha, usuario.DataCadastro))
             {
                 return Ok(usuario);
             }
