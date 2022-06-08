@@ -14,11 +14,12 @@ namespace API.Controllers
         [Route("/playLista")]
         public IActionResult Get([FromQuery] int id)
         {
-            var model = new PlayListRepository();
-            var constula = model.ConsultaId(id);
-            if (constula) return BadRequest();
+            var model = new UsuarioRepository();
 
             var data = model.GetId(id);
+
+            if (data.Rows.Count <= 0) return BadRequest();
+
 
             var dataJson = JsonConvert.SerializeObject(data, Formatting.Indented);
 
