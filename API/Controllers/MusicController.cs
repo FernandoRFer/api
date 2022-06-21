@@ -15,9 +15,9 @@ namespace API.Controllers
         [Route("/music")]
         public IActionResult Get([FromQuery] string? filtroNome)
         {
-            var model = new UsuarioRepository();
+            var model = new MusicaCompletaRepository();
 
-            var data = model.GetId(id);
+            var data = model.GetMusicas(filtroNome);
 
             if (data.Rows.Count <= 0) return BadRequest();
 
@@ -66,7 +66,7 @@ namespace API.Controllers
        
 
         [HttpPatch]
-        [Route("/musiccifra")]
+        [Route("/music")]
         public IActionResult PatchCifra([FromBody] Music music)
         {
 

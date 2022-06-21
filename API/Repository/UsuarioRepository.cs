@@ -45,15 +45,25 @@ namespace API.Repository
 
 
 
-        public bool GetLogin(string? login)
+        public DataTable GetLogin(string? login)
         {
             var query = "Select * From Usuario WHERE Login = '" + login + "'";
+
+            var data = sql.ExecuteSelect(query);
+
+            return data;
+        }
+
+        public bool GetLoginConsulta(string login)
+        {
+            var query = "Select * From Usuario Where Id = '" + login + "'";
 
             var data = sql.ExecuteSelect(query);
 
             if (data.Rows.Count > 0) return false;
 
             return true;
+
         }
 
         public bool Delete (int id)

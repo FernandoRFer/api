@@ -13,7 +13,7 @@ namespace API.Models
             sql = new Sql();
         }
 
-        public DataTable GetMusics(string? filtroNome)
+        public DataTable GetMusicas(string? filtroNome)
         {
             var query = "Select * From MusicaCompleta WHERE NomeMusica LIKE '%" + filtroNome + "%'";
 

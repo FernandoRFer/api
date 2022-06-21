@@ -12,11 +12,11 @@ namespace API.Controllers
     {
         [HttpGet]
         [Route("/usuario")]
-        public IActionResult Get([FromQuery] int id) 
+        public IActionResult Get([FromQuery] string? login) 
             {
             var model = new UsuarioRepository();
 
-            var data = model.GetId(id);
+            var data = model.GetLogin(login);
 
             if (data.Rows.Count <= 0) return BadRequest();
 
@@ -35,7 +35,7 @@ namespace API.Controllers
         public IActionResult Post([FromBody] Usuario usuario)
         {
             var model = new UsuarioRepository();
-            var constula = model.GetLogin(usuario.Login);
+            var constula = model.GetLoginConsulta(usuario.Login);
 
             if (!constula)
             {
